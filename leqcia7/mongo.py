@@ -45,17 +45,17 @@ class CreateMongoDB:
         pipeline = [
             {
                 "$group": {
-                    "_id": "$author",  # Group by the author field
-                    "count": {"$sum": 1}  # Count occurrences
+                    "_id": "$author",  
+                    "count": {"$sum": 1}  
                 }
             },
             {
                 "$sort": {
-                    "count": -1  # Sort by count in descending order
+                    "count": -1  
                 }
             },
             {
-                "$limit": 1  # Limit to the top result
+                "$limit": 1  
             }
         ]
 
