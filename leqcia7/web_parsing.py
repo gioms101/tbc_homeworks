@@ -48,7 +48,7 @@ def move_to_detailed_page(receipt_url):
 
 
     data = {"receipt_name": receipt_name,
-            "receipt_url":receipt_url,
+            "receipt_url":f"https://kulinaria.ge{receipt_url}",
             "photo_url":photo_url,
             "description":description,
             "author":author,
