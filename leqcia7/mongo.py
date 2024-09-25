@@ -59,10 +59,10 @@ class CreateMongoDB:
             }
         ]
 
-        # Execute the aggregation
+        
         result = list(self.collection.aggregate(pipeline))
 
-        # Print the most frequent author
+       
         if result:
             most_frequent_author = result[0]['_id']
             author_count = result[0]['count']
